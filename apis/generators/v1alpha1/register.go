@@ -73,6 +73,8 @@ var (
 	ClusterGeneratorKind = reflect.TypeFor[ClusterGenerator]().Name()
 	// CloudsmithAccessTokenKind is the kind name for CloudsmithAccessToken resource.
 	CloudsmithAccessTokenKind = reflect.TypeFor[CloudsmithAccessToken]().Name()
+	// ArtifactoryAccessTokenKind is the kind name for ArtifactoryAccessToken resource.
+	ArtifactoryAccessTokenKind = reflect.TypeFor[ArtifactoryAccessToken]().Name()
 )
 
 func init() {
@@ -94,6 +96,7 @@ func init() {
 	*/
 
 	SchemeBuilder.Register(&ACRAccessToken{}, &ACRAccessTokenList{})
+	SchemeBuilder.Register(&ArtifactoryAccessToken{}, &ArtifactoryAccessTokenList{})
 	SchemeBuilder.Register(&ClusterGenerator{}, &ClusterGeneratorList{})
 	SchemeBuilder.Register(&CloudsmithAccessToken{}, &CloudsmithAccessTokenList{})
 	SchemeBuilder.Register(&ECRAuthorizationToken{}, &ECRAuthorizationTokenList{})

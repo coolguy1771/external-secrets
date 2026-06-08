@@ -26,6 +26,32 @@ spec:
       registry: string
       scope: string
       tenantId: string
+    artifactoryAccessTokenSpec:
+      auth:
+        oidc:
+          applicationKey: string
+          identityMappingName: string
+          includeReferenceToken: true
+          projectKey: string
+          providerName: string
+          providerType: string
+          serviceAccountRef:
+            audiences: [] # minItems 0 of type string
+            name: string
+            namespace: string
+        referenceToken:
+          description: string
+          expiresIn: 1
+          includeReferenceToken: true
+          projectKey: string
+          refreshable: true
+          scope: string
+          token:
+            key: string
+            name: string
+            namespace: string
+      registry: string
+      url: string
     cloudsmithAccessTokenSpec:
       apiUrl: string
       orgSlug: string
@@ -354,4 +380,4 @@ spec:
           name: string
       timeout: string
       url: string
-  kind: "ACRAccessToken" # "ACRAccessToken", "CloudsmithAccessToken", "ECRAuthorizationToken", "Fake", "GCRAccessToken", "GithubAccessToken", "QuayAccessToken", "Password", "SSHKey", "STSSessionToken", "UUID", "VaultDynamicSecret", "Webhook", "Grafana"
+  kind: "ACRAccessToken" # "ACRAccessToken", "ArtifactoryAccessToken", "CloudsmithAccessToken", "ECRAuthorizationToken", "Fake", "GCRAccessToken", "GithubAccessToken", "QuayAccessToken", "Password", "SSHKey", "STSSessionToken", "UUID", "VaultDynamicSecret", "Webhook", "Grafana"
